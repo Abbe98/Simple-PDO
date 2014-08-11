@@ -1,5 +1,5 @@
 <?php
-class Database {
+class SimplePDO {
   /* Database Details */
   private $host = '';
   private $user = '';
@@ -17,7 +17,7 @@ class Database {
     }
   }
 
-  public static function getInstanse() {
+  public static function getInstance() {
     if(!isset(self::$_instance)) {
       self::$_instance = new Database();
     }

@@ -1,0 +1,22 @@
+{
+    "name": "abbe98/simple-pdo",
+    "description": "A simpe PDO class for MariaDB and MySQL",
+    "keywords": ["pdo","mysql", "mariadb", "database"],
+    "homepage": "https://github.com/Abbe98/Simple-PDO",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Albin Larsson",
+            "homepage": "http://abbe98.github.io/"
+        }
+    ],
+    "require": {
+        "php": ">=5.0.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "simple-pdo": ""
+        }
+    },
+   "minimum-stability": "stable"
+}
