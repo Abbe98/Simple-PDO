@@ -1,17 +1,11 @@
 <?php
 class SimplePDO {
-  /* Database Details */
-  private $host = '';
-  private $user = '';
-  private $pass = '';
-  private $dbname = '';
-
   private static $_instance = null;
   private $stmt;
 
   public function __construct(){
     try {
-      $this->dbhost = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->dbname, $this->user, $this->pass);
+      $this->dbhost = new PDO('mysql:host=' . HOST . ';dbname=' . DBNAME, USERNAME, PASSWORD);
     } catch(PDOException $e){
       $this->error = $e->getMessage();
     }
@@ -19,7 +13,7 @@ class SimplePDO {
 
   public static function getInstance() {
     if(!isset(self::$_instance)) {
-      self::$_instance = new Database();
+      self::$_instance = new SimplePDO();
     }
     return self::$_instance;
   }

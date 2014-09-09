@@ -4,11 +4,13 @@ Secure and simple!
 ##Installation 
 Include `pdo.php` or install the [composer package](https://packagist.org/packages/abbe98/simple-pdo).
 
-In `pdo.php` enter your database connection/user details:
-`private $host = '';`
-`private $user = '';`
-`private $pass = '';`
-`private $dbname = '';`
+In in your config file define your database connection/user details in the following way:
+
+    define('HOST', ''); // the IP of the database
+    define('DBNAME', ''); // the database name to be used
+    define('USERNAME', ''); // the username to be used with the database
+    define('PASSWORD', ''); // the password to be used with the username
+
 
 ##Usage
 Create new SimplePDO instance or use the existing one:
