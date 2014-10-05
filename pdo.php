@@ -1,7 +1,7 @@
 <?php
 class SimplePDO {
   private static $_instance = null;
-  private $stmt;
+  private $_stmt;
 
   public function __construct(){
     try {
@@ -19,7 +19,7 @@ class SimplePDO {
   }
 
   public function query($query) {
-    $this->stmt = $this->dbhost->prepare($query);
+    $this->_stmt = $this->dbhost->prepare($query);
   }
 
   public function bind($param, $value, $type = null) {
@@ -38,19 +38,24 @@ class SimplePDO {
         $type = PDO::PARAM_STR;
       }
     }
-    $this->stmt->bindValue($param, $value, $type);
+    $this->_stmt->bindValue($param, $value, $type);
   }
 
   public function execute() {
-    return $this->stmt->execute();
+    return $this->_stmt->execute();
   }
 
   public function resultset() {
     $this->execute();
-    return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $this->_stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
   public function rowCount() {
-    return $this->stmt->rowCount();
+    return $this->_stmt->rowCount();
+  }
+
+  public function single() {
+    $this->execute();
+    return $this->_stmt->fetch(PDO::FETCH_ASSOC);
   }
 }
