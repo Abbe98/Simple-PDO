@@ -31,7 +31,7 @@ Query database and return multiply rows:
     function get_all_users() {
         $database = SimplePDO::getInstance();
         $database->query("SELECT * FROM `users`");
-        return $database->resultset();
+        return $database->resultSet();
     }
     
 Insert new row in database:

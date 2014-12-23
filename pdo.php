@@ -15,6 +15,7 @@ class SimplePDO {
     if(!isset(self::$_instance)) {
       self::$_instance = new SimplePDO();
     }
+
     return self::$_instance;
   }
 
@@ -45,7 +46,7 @@ class SimplePDO {
     return $this->_stmt->execute();
   }
 
-  public function resultset() {
+  public function resultSet() {
     $this->execute();
     return $this->_stmt->fetchAll(PDO::FETCH_ASSOC);
   }
