@@ -14,9 +14,7 @@
         "php": ">=5.0.0"
     },
     "autoload": {
-        "psr-0": {
-            "simple-pdo": ""
-        }
+      "files": ["src/pdo.php"]
     },
    "minimum-stability": "stable"
 }
