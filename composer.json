@@ -7,11 +7,11 @@
     "authors": [
         {
             "name": "Albin Larsson",
-            "homepage": "http://abbe98.github.io/"
+            "homepage": "http://byabbe.se/"
         }
     ],
     "require": {
-        "php": ">=5.0.0"
+        "php": ">=5.6.0"
     },
     "autoload": {
       "files": ["src/pdo.php"]
