@@ -59,7 +59,7 @@ $database->execute();
 ```php
 $database = SimplePDO::getInstance();
 $database->query("UPDATE `users` SET `name` = :name WHERE `id` = :id");
-$database->bind(':name', $new_name);
+$database->bind(':name', $newName);
 $database->bind(':id', $id);
 $database->execute();
 ```
