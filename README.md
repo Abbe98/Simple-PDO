@@ -53,5 +53,3 @@ Update existing row:
         $database->bind(':id', $id);
         $database->execute();
     }
-
-**Licensed under MIT**
